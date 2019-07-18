@@ -16,7 +16,7 @@ function getShoppingList(id) {
   return db("recipes as r")
     .innerJoin("ingredients as i", "r.id", "i.recipe_id")
     .select("r.recipe_name", "i.ingredient_name", "i.quantity")
-    .where("i.id", id); //recipe.id? test and see lol
+    .where("r.id", id); //ingredient.id? test and see lol
 }
 
 //GET steps for recipe id
