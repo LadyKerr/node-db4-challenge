@@ -35,12 +35,6 @@ exports.up = function(knex) {
     })
     .createTable("steps", tbl => {
       tbl.increments("id");
-
-      tbl
-        .integer("step_number")
-        .notNullable()
-        .unique();
-
       tbl.string("description", 800).notNullable();
     });
 };
