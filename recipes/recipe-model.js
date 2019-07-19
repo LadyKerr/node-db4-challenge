@@ -23,7 +23,7 @@ function getShoppingList(id) {
 function getInstructions(id) {
   return db("recipes as r")
     .innerJoin("ingredients as i", "r.id", "i.recipe_id")
-    .innerJoin("steps as s", "i.steps_id", "s.id")
-    .select("r.recipe_name", "s.step_number", "s.description")
+    .innerJoin("steps as s", "i.steps_id", "s.steps_id")
+    .select("r.recipe_name", "s.steps_id", "s.description")
     .where("r.id", id);
 }
