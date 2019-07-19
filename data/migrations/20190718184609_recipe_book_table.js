@@ -1,7 +1,7 @@
 exports.up = function(knex) {
   return knex.schema
     .createTable("recipes", tbl => {
-      tbl.increments();
+      tbl.increments("id");
 
       tbl
         .string("recipe_name", 128)
@@ -11,7 +11,7 @@ exports.up = function(knex) {
       tbl.string("recipe_description", 300).notNullable();
     })
     .createTable("ingredients", tbl => {
-      tbl.increments("ingredient_id");
+      tbl.increments("id");
       tbl.string("ingredient_name", 258).notNullable();
       tbl.float("quantity").notNullable();
       //Foreign Key 1
@@ -34,12 +34,7 @@ exports.up = function(knex) {
         .onDelete("RESTRICT");
     })
     .createTable("steps", tbl => {
-      tbl.increments("steps_id");
-
-      tbl
-        .integer("step_number")
-        .notNullable()
-        .unique();
+      tbl.increments("id");
 
       tbl.string("description", 800).notNullable();
     });
