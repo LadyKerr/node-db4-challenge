@@ -6,17 +6,17 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex("steps").insert([
         {
-          id: 1,
+          steps_id: 1,
           description: "place spaghetti in a pot of boiling water"
         },
         {
-          id: 2,
+          steps_id: 2,
           description: "after draining, add sauce to pasta"
         },
-        { id: 3, description: "chop pumpkin in cubes" },
-        { id: 4, description: "boil noodles in water" },
+        { steps_id: 3, description: "chop pumpkin in cubes" },
+        { steps_id: 4, description: "boil noodles in water" },
         {
-          id: 5,
+          steps_id: 5,
           description: "boil water then add washed rice to the pot"
         }
       ]);
