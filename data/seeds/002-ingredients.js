@@ -6,37 +6,32 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex("ingredients").insert([
         {
-          id: 1,
           ingredient_name: "water",
-          quantity: "5 cups",
+          quantity: 4.5,
           recipe_id: 1,
           steps_id: 1
         },
         {
-          id: 1,
           ingredient_name: "spaghetti",
-          quantity: "1 pk",
+          quantity: 1.5,
           recipe_id: 1,
           steps_id: 2
         },
         {
-          id: 2,
           ingredient_name: "tomato sauce",
-          quantity: "1 jar",
+          quantity: 1.5,
           recipe_id: 1,
           steps_id: 3
         },
         {
-          id: 3,
           ingredient_name: "parsley",
-          quantity: "5 tblsp",
+          quantity: 2.3,
           recipe_id: 1,
           steps_id: 4
         },
         {
-          id: 4,
           ingredient_name: "shredded parmesean",
-          quantity: "2 cups",
+          quantity: 2.4,
           recipe_id: 1,
           steps_id: 5
         }
